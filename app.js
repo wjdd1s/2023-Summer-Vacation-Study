@@ -1,14 +1,14 @@
-const h1 = document.querySelector(".hello h1");
-let span = document.querySelector("span")
+const btn = document.querySelector("button");
 
-let num = 0;
 
 function handleTitleClick(){
-    num += 1;
-    span.innerHTML = num;
+    btn.classList.toggle("clicked");
+    if(btn.innerText === "확인"){
+        btn.innerText = "취소";
+    } else{
+        btn.innerText = "확인";
+    }
 }
 
 
-h1.addEventListener("click", handleTitleClick);
-
-
+btn.addEventListener("click", handleTitleClick);
