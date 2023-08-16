@@ -3,16 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>momentum</title>
 </head>
 <body>
-    <form id="login-form">
+    <form id = "login-form">
+        <img src = "profileImage.png" width = "200px" height = "200px">
         <input type="text" name="username" id="username-field" class="login-form-field" placeholder="Id">
         <input type="password" name="password" id="password-field" class="login-form-field" placeholder="Password">
         <input type="submit" value="Login" id="login-form-submit">
-      </form>
-    <h1 id = "greeting" class = "hidden"></h1>
-    <script src = "app.js"></script>
+    </form>
+    <h2 id = "clock" class = "hidden">00:00:00</h2>
+
+    <script src = "js/greetings.js"></script>
+    <script src = "js/clock.js"></script>
+    <script src = "js/background.js"></script>
 </body>
 </html>
