@@ -44,4 +44,9 @@
     bottom:0px;
     z-index: -1;
     opacity:80%;
-    }
+}
+
+ul {
+    list-style: none;
+    
+}

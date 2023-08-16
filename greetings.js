@@ -1,6 +1,6 @@
 const loginForm = document.querySelector("#login-form");
 const loginButton = document.getElementById("login-form-submit");
-
+    
 const HIDDEN_CLASSNAME = "hidden";
 const USERID_KEY = "username";
 const USERPW_KEY = "password";
@@ -20,6 +20,7 @@ loginButton.addEventListener("click", (event) => {
         loginForm.classList.add(HIDDEN_CLASSNAME);
         bgImage.classList.remove(HIDDEN_CLASSNAME);
         clock.classList.remove(HIDDEN_CLASSNAME);
+        toDoForm.classList.remove(HIDDEN_CLASSNAME);
     } else {
        alert("Please check your Id/PW!");
     }
