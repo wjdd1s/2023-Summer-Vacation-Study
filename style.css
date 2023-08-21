@@ -48,5 +48,9 @@
 
 ul {
     list-style: none;
-    
+}
+#quote {
+    position: absolute;
+    left: 20%;
+    top : 93%;
 }

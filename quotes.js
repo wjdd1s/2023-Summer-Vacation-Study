@@ -1,4 +1,4 @@
-const quotee = document.getElementById("quotee");
+
 const quotes = [
     {
     quote: 'I never dreamed about success, I worked for it',
