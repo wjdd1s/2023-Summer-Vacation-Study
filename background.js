@@ -4,6 +4,6 @@ const bgImage = document.createElement("img");
 
 bgImage.src = `${chosenImage}`;
 bgImage.id = "background";
-bgImage.classList.add("hidden");
+
 
 document.body.appendChild(bgImage);
