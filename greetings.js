@@ -18,9 +18,9 @@ loginButton.addEventListener("click", (event) => {
 
     if (savedUserName === "wjddls" && savedUserPw === "12345") {
         loginForm.classList.add(HIDDEN_CLASSNAME);
-        weather.classList.remove(HIDDEN_CLASSNAME);
+        weathers.classList.remove(HIDDEN_CLASSNAME);
         clock.classList.remove(HIDDEN_CLASSNAME);
-        quote.classList.remove(HIDDEN_CLASSNAME);
+        quotee.classList.remove(HIDDEN_CLASSNAME);
         toDoForm.classList.remove(HIDDEN_CLASSNAME);
         toDoList.classList.remove(HIDDEN_CLASSNAME);
     } else {
