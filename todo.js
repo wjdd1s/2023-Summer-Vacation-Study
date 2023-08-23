@@ -2,16 +2,11 @@ const toDoForm = document.getElementById("todo-form");
 const toDoInput = toDoForm.querySelector("input");
 const toDoList = document.getElementById("todo-list");
 const TODOS_KEY = "toDos";
-const CHECK_KEY = "checked";
 
 let toDos = [];
-let checked = [];
 
 function saveToDos(){
     localStorage.setItem("toDos", JSON.stringify(toDos));
-}
-function finished(){
-    localStorage.setItem("checked", JSON.stringify(checked));
 }
 
 function paintToDo(newTodo){
@@ -31,11 +26,6 @@ function paintToDo(newTodo){
         li.classList.toggle('complete');
         if (checkBox.checked) {
             span.style.textDecorationLine = "line-through";
-            const checkedToDo = {
-                id : li.id,
-            }
-            checked.push(checkedToDo);
-            finished();
         } else {
             span.style.textDecorationLine = "none";
         }
@@ -52,28 +42,21 @@ function handleToDoSubmit(event){
         text : newTodo,
         id : Date.now(),
     }
-    
     toDos.push(newToDoObj);
     paintToDo(newToDoObj);
     saveToDos();
-
     
 }
-
 
 toDoForm.addEventListener("submit",handleToDoSubmit);
 
 
 const savedToDos = localStorage.getItem(TODOS_KEY);
-const finish = localStorage.getItem(CHECK_KEY);
 
 if (savedToDos !== null) {
     const parsedToDos = JSON.parse(savedToDos);
     toDos = parsedToDos;
     parsedToDos.forEach(paintToDo); 
-}
     
-if (finished !== null) {
-    const parsedCheck = JSON.parse(finish);
     
 }

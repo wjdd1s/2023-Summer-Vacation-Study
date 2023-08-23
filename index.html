@@ -10,15 +10,17 @@
     <form id = "login-form">
         <img src = "profileImage.png" width = "200px" height = "200px">
         <input type="text" name="username" id="username-field" class="login-form-field" placeholder="Id">
-        <input type="password" name="password" id="password-field" class="login-form-field" placeholder="Password">
         <input type="submit" value="Login" id="login-form-submit">
     </form>
+    
+    <h1 id = "greeting" class = "hidden"></h1>
     <h2 id = "clock" class = "hidden">00:00:00</h2>
-    <form id = "todo-form" class = "hidden" >
-        <input type = "text" placeholder= "Write a To Do and Press Enter" required />
-        
+    <h3 id = "date"></h3>
+    <form id = "todo-form" class = "hidden">
+        <input id = "writetodo" class = "write-todo" type = "text" placeholder= "Write a To Do and Press Enter" required />
+        <ul id = "todo-list" class = "hidden"></ul>
     </form>
-    <ul id = "todo-list" class = "hidden"></ul>
+    
     <div id = "weather" class = "hidden">
         <span></span>
         <span></span>
@@ -33,5 +35,6 @@
     <script src = "background.js"></script>
     <script src = "todo.js"></script>
     <script src = "weather.js"></script>
+    <script src = "date.js"></script>
 </body>
 </html>
